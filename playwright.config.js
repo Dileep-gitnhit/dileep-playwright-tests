@@ -43,18 +43,18 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: {
-        ...devices['iPhone 14 Pro Max'],
-        screenshot: 'on',
-        //viewport : {width: 1000, height:500},
-        trace : 'retain-on-failure',
-        ignoreHttpsErrors: true, //accept ssl certificate in case of error (click on advanced option)
-        Permissions : ['geolocation'], //to allow location access while running tests
+      // use: {
+      //   ...devices['iPhone 14 Pro Max'],
+      //   screenshot: 'on',
+      //   //viewport : {width: 1000, height:500},
+      //   trace : 'retain-on-failure',
+      //   ignoreHttpsErrors: true, //accept ssl certificate in case of error (click on advanced option)
+      //   Permissions : ['geolocation'], //to allow location access while running tests
       
       
-      } ,
+      // } ,
       
-      //use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], screenshot: 'on' },
     }
 
     // {
