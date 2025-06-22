@@ -1,4 +1,6 @@
-const {test, expect} = require('@playwright/test')
+// const {test, expect} = require('@playwright/test')
+
+import {test, expect} from '@playwright/test'
 
 
 
@@ -15,6 +17,7 @@ test('Dropdown', async ({page}) =>{
 
     await page.locator('.childmenu ').click()
     await page.waitForTimeout(5000)
+
 
 
 })

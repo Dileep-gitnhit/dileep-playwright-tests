@@ -23,7 +23,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['html',{open: 'always'}]],
   timeout: 40 * 1000,
   expect: {
 
@@ -54,7 +54,7 @@ export default defineConfig({
       
       // } ,
       
-      use: { ...devices['Desktop Chrome'], screenshot: 'on' },
+      use: { ...devices['Desktop Chrome'], screenshot: 'on', video: 'on' },
     }
 
     // {

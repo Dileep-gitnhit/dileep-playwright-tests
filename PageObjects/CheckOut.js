@@ -37,7 +37,7 @@ async orderReviewPage()
 {
     let orderTotal = [];
     await this.page.screenshot({path: 'reviewscreeensot.png'})
-    let total = this.totalamount.allTextContents()
+    let total = this.totalamount.allInnerTexts();
     console.log("Order total = ", +total)
 
     await this.page.locator('.cart_footer').locator('button').last().click()

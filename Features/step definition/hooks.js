@@ -5,7 +5,7 @@ Before(async function ()
 {
     
     const browser = await chromium.launch({ headless: false }) //we are calling a browser here, then we are calling page, we cannot directyly mention page here like done in test
-    const context = await browser.newContext({viewport: {width : 900, height : 1000}})
+    const context = await browser.newContext({viewport: {width : 1500, height : 1000}})
     this.page = await context.newPage()
 })
 
