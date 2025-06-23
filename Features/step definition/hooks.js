@@ -10,7 +10,7 @@ Before(async function ()
 })
 
 // Before(async function ()
-// {
+// { 
 //     const devicename = devices['iPad Pro 11']
 //     //const device = devices[devicename]
 

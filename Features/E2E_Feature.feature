@@ -1,6 +1,6 @@
 Feature: Ecommere End to End
 
-@EndToEnd
+@EndToEnd @Ecommerce1
     Scenario: Placing order in website
         Given login to ecommerce application using "standard_user" and "secret_sauce"
         When adding "Sauce Labs Onesie" to cart
