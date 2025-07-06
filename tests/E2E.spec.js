@@ -8,7 +8,7 @@ const {Checkout} = require('../PageObjects/CheckOut')
 
 
 
-test ('E2E_Dileep ${data.userName}', async ({page}) =>
+test ('@EndToEnd E2E_Dileep ${data.userName}', async ({page}) =>
 {
 
     let prodname = "Sauce Labs Onesie"
@@ -33,7 +33,7 @@ test ('E2E_Dileep ${data.userName}', async ({page}) =>
     await checkout.clickOnCheckout()
     await checkout.shippingDetails(firstName,lastName,zip)
     await checkout.orderReviewPage()
-    await page.pause()
+    //await page.pause()
 
 
 

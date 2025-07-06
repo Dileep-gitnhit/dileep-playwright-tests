@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices, firefox } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -23,7 +23,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html',{open: 'always'}]],
+  reporter: [['html',{open: 'on-failure'}]],
   timeout: 40 * 1000,
   expect: {
 
@@ -55,6 +55,12 @@ export default defineConfig({
       // } ,
       
       use: { ...devices['Desktop Chrome'], screenshot: 'on', video: 'on' },
+    },
+    {
+
+      name: 'firefox',
+      use: {browsername: 'firefox', headless: false ,slowMo: 100, screenshot: 'only-on-failure', video: 'on-first-retry', viewport: {width:1000, height:1000}}
+
     }
 
     // {

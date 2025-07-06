@@ -68,7 +68,7 @@ test.only('Alert with prompt', async ({page}) =>
     expect(dialog.defaultValue()).toContain('Automation Testing user')
 
 
-    await dialog.accept('Hello Dileep') ////while accepting we can pass the text to bewritten in the prompt
+    await dialog.accept('Hello Dileep') ////while accepting we can pass the text to be written in the prompt
     await page.waitForTimeout(5000)
 
 })

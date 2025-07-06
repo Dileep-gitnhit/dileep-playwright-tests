@@ -2,14 +2,17 @@
   "name": "e2e_automation_dileep",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+          "EndToEnd": "npx playwright test --grep @EndToEnd"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.21"
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^22.15.21",
+    "allure-playwright": "^3.3.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.3.0",
